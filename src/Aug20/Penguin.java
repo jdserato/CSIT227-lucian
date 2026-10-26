@@ -6,6 +6,11 @@ public class Penguin extends Bird implements Diver{
     }
 
     @Override
+    public int layEggs() {
+        return 1;
+    }
+
+    @Override
     public void dive() {
         System.out.println("Penguin dives");
     }

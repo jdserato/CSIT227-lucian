@@ -5,6 +5,10 @@ public class Dog extends Mammal {
         super(name);
     }
 
+    public Dog(String name, int age) {
+        super(name, age);
+    }
+
     void bite() {
         System.out.println(name + " is biting you");
     }

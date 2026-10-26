@@ -6,15 +6,29 @@ public abstract class Animal {
     private int age;
     String breed;
 
-    Animal(String name) {
+    public int getAge() {
+        return age;
+    }
+
+    Animal(String name, int age) {
         this.name = name;
+        this.age = age;
         count_animals++;
+    }
+
+    Animal(String name) {
+        this(name, 0);
     }
 
     public void setAge(int age) {
         if (age >= 0) {
             this.age = age;
         }
+    }
+
+    static void printNumberOfAnimals() {
+        System.out.println("Your number of " +
+                "animals is " + count_animals);
     }
 
     abstract String makeSound();
@@ -34,4 +48,16 @@ public abstract class Animal {
         }
         return false;
     }
+
+    public static class Crocodile extends Animal{
+        public Crocodile(String name) {
+            super(name);
+        }
+
+        @Override
+        String makeSound() {
+            return "rawr";
+        }
+    }
+
 }

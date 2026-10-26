@@ -6,6 +6,11 @@ public final class Cat extends Mammal {
     }
 
     @Override
+    void provideMilk() {
+        System.out.println("Cat is providing milk to its litter.");
+    }
+
+    @Override
     String makeSound() {
         return name + ": meow";
     }
